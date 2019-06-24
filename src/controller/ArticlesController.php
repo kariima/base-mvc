@@ -12,7 +12,21 @@ class ArticlesController {
 
     public function save () {
 
-        dump($_POST);
+        $article = new Article;
+        $article->setTitle($_POST['title']);
+        $article->setContent($_POST['content']);
+        $article->setAuthorId($_POST['authorid']);
+
+        echo "Test de getContent() : ";
+        dump($article);
+
+        $article->save();
+
+        dump($article);
+
+        echo "L'article est l'id " . $article->getId();
+
+
 
     }
 }
