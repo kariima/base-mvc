@@ -16,4 +16,4 @@ $router->post('/ajout-article', 'ArticlesController@save');
 
 
 // Run it!
-$router->run();
+$router->run(); 
